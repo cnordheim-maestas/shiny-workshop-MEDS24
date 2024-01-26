@@ -32,7 +32,15 @@ ui <- navbarPage(
                                      selected = c("cascade", "pool"), # to be selected by default
                                      options = pickerOptions(actionsBox = TRUE), # adds a selct all and deselect all
                                      multiple = TRUE # can select multiple channel types onto the plot together
-                                     ) # END channel type pickerinput
+                                     ), # END channel type pickerinput
+                         
+                         # section checkboxGroupButtons ----
+                         checkboxGroupButtons(inputId = "section_input", label = "Select a sampling section(s):",
+                                              choices = c("clear cut forest", "old growth forest"),
+                                              selected = c("clear cut forest", "old growth forest"),
+                                              individual = FALSE, justified = TRUE, size = "sm",
+                                              checkIcon = list(yes = icon("check", lib = "font-awesome"), 
+                                                               no = icon("xmark", lib = "font-awesome"))), # END section checkboxGroupInput
                           
                         ), # END trout sidebar panel
                         
