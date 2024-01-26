@@ -6,7 +6,20 @@ ui <- navbarPage(
   # (Page 1) intro tabPanel ----
   tabPanel(title = "About this App",
            
-           "background info will go here" # REPLACE THIS WITH CONTENT
+           # intro text fluidRow
+           fluidRow(
+             
+             # use columns to create white space on sides
+             column(1),
+             column(10, includeMarkdown("text/about.md")),
+             column(1)
+             
+           ), #END intro text fluidrow
+           
+           hr(), # creates light gray horizontal line
+           
+           # footer text ----
+           includeMarkdown("text/footer.md")
            
   ), # END (Page 1) intro tabPanel
   
@@ -64,14 +77,31 @@ ui <- navbarPage(
                         # penguin sidebar panel ----  
                         sidebarPanel(
                           
-                          "penguin inputs go here"
+                         #  "penguin inputs go here for the picker and slider!"
+                          
+                          # island pickerinput ----
+                          pickerInput(inputId = "penguin_island_input",
+                                      label = "Select Island(s):",
+                                      choices = unique(penguins$island), # prints all options in the column channel type
+                                      selected = unique(penguins$island), # to be selected by default
+                                      options = pickerOptions(actionsBox = TRUE), # adds a select all and deselect all
+                                      multiple = TRUE # can select multiple channel types onto the plot together
+                          ), # END island pickerinput
+                          
+                          
+                          # bin penguin slider ---- 
+                          sliderInput(inputId = "bin_num_input",
+                                      label = "select number of bins:",
+                                      value = 25, min = 1, max = 100)
+                          
                           
                         ), # END penguin sidebar panel
                         
                         # penguin main panel
                         mainPanel(
                           
-                          "penguin plot goes here"
+                          # histogram output ----
+                          plotOutput(outputId = "flipperLength_histogram_output")
                           
                         ) # END main panel
                         

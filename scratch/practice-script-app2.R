@@ -34,6 +34,7 @@ clean_trout <- and_vertebrates |>
   drop_na()
 
 #..................practice filtering trout data.................
+# why not the global? bc needs to be reactive!!
 trout_filtered_df <- clean_trout |> 
   filter(channel_type %in% c("pool", "rapid")) |> 
   filter(section %in% c("clear cut forest"))
