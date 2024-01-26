@@ -22,8 +22,8 @@ ui <- fluidPage(
   
   # year input ----
   checkboxGroupInput(inputId = "year_input", label = "Select year(s):", 
-                     choices = c("2007", "2008", "2009"), # all choices
-                     selected =c("2007", "2008")), # what is automatically selected
+                     choices = c(2007, 2008, 2009), # specifies the order
+                     selected =c(2007, 2008)), # what is automatically selected
   
   # DT output ----
   DT::dataTableOutput(outputId = "penguin_DT_output")
