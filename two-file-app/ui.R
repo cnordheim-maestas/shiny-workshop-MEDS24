@@ -39,7 +39,8 @@ ui <- navbarPage(
                         # trout main panel ----
                         mainPanel(
                           
-                          "trout output will live here"
+                          # trout scatterplot output
+                          plotOutput(outputId = "trout_scatterplot_output") # END trout scatterplot output
                           
                         ) # END trout main panel
                         
