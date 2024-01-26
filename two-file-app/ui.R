@@ -41,7 +41,6 @@ ui <- navbarPage(
                                               individual = FALSE, justified = TRUE, size = "sm",
                                               checkIcon = list(yes = icon("check", lib = "font-awesome"), 
                                                                no = icon("xmark", lib = "font-awesome"))), # END section checkboxGroupInput
-                          
                         ), # END trout sidebar panel
                         
                         # trout main panel ----
