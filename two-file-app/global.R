@@ -5,6 +5,7 @@ library(palmerpenguins)
 library(lterdatasampler)
 library(shinyWidgets)
 library(markdown)
+library(shinycssloaders)
 
 # we want this in our global bc it makes the server cleaner and it will run before everything else when we render our app
 #.......................wrangle trout data.......................

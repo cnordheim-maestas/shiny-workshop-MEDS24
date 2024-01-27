@@ -60,7 +60,8 @@ ui <- navbarPage(
                         mainPanel(
                           
                           # trout scatterplot output
-                          plotOutput(outputId = "trout_scatterplot_output") # END trout scatterplot output
+                          plotOutput(outputId = "trout_scatterplot_output") %>% # END trout scatterplot output
+                            shinycssloaders::withSpinner(color = "#006792", type = 1)
                           
                         ) # END trout main panel
                         
@@ -101,7 +102,8 @@ ui <- navbarPage(
                         mainPanel(
                           
                           # histogram output ----
-                          plotOutput(outputId = "flipperLength_histogram_output")
+                          plotOutput(outputId = "flipperLength_histogram_output") %>%
+                            shinycssloaders::withSpinner(color = "#006792", type = 1)
                           
                         ) # END main panel
                         
