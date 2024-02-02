@@ -1,4 +1,4 @@
-penguinSpp_pickerinput <- function (inputId) {
+spp_picker <- function (inputId) {
   pickerInput(inputId = inputId, label = "Select a species:",
               choices = c("Adelie", "Chinstrap", "Gentoo"),
               selected = c("Adelie", "Chinstrap", "Gentoo"),
