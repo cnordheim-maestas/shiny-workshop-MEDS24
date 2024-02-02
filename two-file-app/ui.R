@@ -1,8 +1,9 @@
 # user interface ----
 ui <- navbarPage(
   
-  #---- theme
-  theme = "shiny-fresh-theme.css",
+  #---- theme (commenting out for now it's ugly)
+ # theme = "shiny-fresh-theme.css",
+  theme = "sass-styles.css",
   
   title = "LTER Animal Data Explorer",
   

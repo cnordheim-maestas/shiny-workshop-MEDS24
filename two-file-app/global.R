@@ -6,6 +6,15 @@ library(lterdatasampler)
 library(shinyWidgets)
 library(markdown)
 library(shinycssloaders)
+library(sass)
+
+
+# COMPILE CSS ----
+sass(
+  input = sass_file("www/sass-styles.scss"),
+  output = "www/sass-styles.css",
+  options = sass_options(output_style = "compressed") # OPTIONAL, but speeds up page load time by removing white-space & line-breaks that make css files more human-readable
+)
 
 # we want this in our global bc it makes the server cleaner and it will run before everything else when we render our app
 #.......................wrangle trout data.......................
