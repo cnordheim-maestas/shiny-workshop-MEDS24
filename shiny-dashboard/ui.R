@@ -34,9 +34,18 @@ body <- dashboardBody(
                    # background info box ----
                    box(width = NULL,
                        
-                                       
+                       # add image                
                       title = tagList(icon("water"), strong("Monitoring Fish Creek Watershed")),
-                      includeMarkdown("text/intro.md")
+                      includeMarkdown("text/intro.md"),
+                      tags$img(src = "FishCreekWatershedSiteMap_2020.jpeg",
+                               alt = "A map of Northern Alaska, showing Fish Creek Watershed located within the National Petroleum Reserve.",
+                               style = "max-width: 100%;"), # css for making the image 100% of the box it is in
+                      
+                      # add map source text (em is italic, the a tag allows you to hyperlink)
+                      tags$h6(tags$em("Map Source:", tags$a(href = "http://www.fishcreekwatershed.org/", "FCWO")), 
+                              style = "text-align: center;")
+                               
+                               
                        
                    ), # END background info box
                    
